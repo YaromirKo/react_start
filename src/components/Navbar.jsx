@@ -1,14 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
+import s from './Navbar.module.css';
 
 const Navbar = () => {
     return (
-        <nav>
-            <div><a href="#1">Profile</a></div>
-            <div><a href="#2">Message</a></div>
-            <div><a href="#3">News</a></div>
-            <div><a href="#4">Music</a></div>
-            <div><a href="#5">Setting</a></div>
+        <nav className={s.navbar}>
+            <div className={s.item}>Profile</div>
+            <div className={s.item}>Message</div>
+            <div className={s.item}>News</div>
+            <div className={s.item}>Music</div>
+            <div className={s.item}>Setting</div>
         </nav>
     )
 };

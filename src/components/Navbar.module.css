@@ -1,0 +1,13 @@
+.navbar {
+    grid-area: nav;
+    background-color: burlywood;
+}
+.item {
+    color: white;
+}
+/*button {*/
+/*    border: none;*/
+/*    background: none;*/
+/*    color: white;*/
+/*    outline: none;*/
+/*}*/
