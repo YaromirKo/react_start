@@ -1,4 +1,4 @@
-.grid {
+.app {
   display: grid;
   grid-template-areas:
           "header header"
@@ -7,5 +7,8 @@
   grid-template-columns: 2fr 10fr;
   /*grid-gap: 10px;*/
   width: 100%;
-
+}
+.app-content {
+  grid-area: content;
+  background-color: cornflowerblue;
 }
