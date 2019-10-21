@@ -11,27 +11,42 @@ const DialogItem = (props) => {
 };
 
 const MessagesItem = (props) => {
-  return (
-      <div className={s.message}>{props.message}</div>
-  )
+    return (
+        <div className={s.message}>{props.message}</div>
+    )
 };
 
 const Dialogs = (props) => {
-  return (
-      <div className={s.dialogs}>
-         <div className={s.dialogsItems}>
-             <DialogItem name="Dima" id="1"/>
-             <DialogItem name="Sema" id="2"/>
-             <DialogItem name="Gena" id="3"/>
-             <DialogItem name="Yaro" id="4"/>
-         </div>
-          <div className={s.messages}>
-              <MessagesItem message="Hi"/>
-              <MessagesItem message="Yeee"/>
-              <MessagesItem message="YesYo"/>
-          </div>
-      </div>
-  )
+// eslint-disable-next-line
+    let dialogsData = [
+        { id: 1, name: 'Dima' },
+        { id: 2, name: 'Sema' },
+        { id: 3, name: 'Gena' },
+        { id: 4, name: 'Yaro' }
+    ];
+
+    let dialogsElements = dialogsData.map( dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
+
+    // eslint-disable-next-line
+    let messagesData = [
+        { id: 1, message: 'Hi' },
+        { id: 2, message: 'Hi Sema' },
+        { id: 3, message: 'Yeee' },
+        { id: 4, message: 'YesYo' }
+    ];
+
+    let messagesElements = messagesData.map(message => <MessagesItem message={message.message} />);
+
+    return (
+        <div className={s.dialogs}>
+            <div className={s.dialogsItems}>
+                { dialogsElements }
+            </div>
+            <div className={s.messages}>
+                { messagesElements }
+            </div>
+        </div>
+    )
 };
 
 export default Dialogs;
